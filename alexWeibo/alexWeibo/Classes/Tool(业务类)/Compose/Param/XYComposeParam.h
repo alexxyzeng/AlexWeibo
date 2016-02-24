@@ -1,13 +1,13 @@
 //
-//  XYComposeParam.h
+//  CZComposeParam.h
 //  传智微博
 //
 //  Created by apple on 15-3-13.
 //  Copyright (c) 2015年 apple. All rights reserved.
 //
 
-#import "XYBaseParam.h"
+#import "CZBaseParam.h"
 
-@interface XYComposeParam : XYBaseParam
+@interface CZComposeParam : CZBaseParam
 @property (nonatomic, copy) NSString *status;
 @end

@@ -1,5 +1,5 @@
 //
-//  XYComposeTool.h
+//  CZComposeTool.h
 //  传智微博
 //
 //  Created by apple on 15-3-13.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface XYComposeTool : NSObject
+@interface CZComposeTool : NSObject
 
 
 /**

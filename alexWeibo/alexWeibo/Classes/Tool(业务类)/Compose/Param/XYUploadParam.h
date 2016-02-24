@@ -1,5 +1,5 @@
 //
-//  XYUploadParam.h
+//  CZUploadParam.h
 //  传智微博
 //
 //  Created by apple on 15-3-13.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface XYUploadParam : NSObject
+@interface CZUploadParam : NSObject
 
 /**
  *  上传文件的二进制数据

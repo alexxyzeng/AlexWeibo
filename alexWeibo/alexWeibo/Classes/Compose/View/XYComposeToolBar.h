@@ -21,7 +21,12 @@
 
 @end
 
-@interface CZComposeToolBar : UIView
+//@interface XYComposeToolBar : UIView
+//
+//@property (nonatomic, weak) id<XYComposeToolBarDelegate> delegate;
+//
+//@end
+@interface XYComposeToolBar : UIView
 
 @property (nonatomic, weak) id<XYComposeToolBarDelegate> delegate;
 

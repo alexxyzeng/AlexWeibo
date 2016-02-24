@@ -18,9 +18,9 @@
 @interface XYStatusCell ()
 
 
-@property (nonatomic, weak) XYOriginalView *originalView;
-@property (nonatomic, weak) XYRetweetView *retweetView ;
-@property (nonatomic, weak)  XYStatusToolBar *toolBar;
+@property (nonatomic, weak) XYOriginalView  *originalView;
+@property (nonatomic, weak) XYRetweetView   *retweetView             ;
+@property (nonatomic, weak) XYStatusToolBar *toolBar;
 
 @end
 

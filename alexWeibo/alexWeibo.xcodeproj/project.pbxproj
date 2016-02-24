@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		06275B2D1C7D727D00C6247F /* XYComposeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06275B2C1C7D727D00C6247F /* XYComposeView.m */; };
-		06275B301C7D7D6400C6247F /* XYComposeToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 06275B2F1C7D7D6400C6247F /* XYComposeToolBar.m */; };
 		06275B331C7D800000C6247F /* XYComposePhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06275B321C7D800000C6247F /* XYComposePhotosView.m */; };
+		06275B361C7D846300C6247F /* XYComposeToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 06275B351C7D846300C6247F /* XYComposeToolBar.m */; };
+		06275B3F1C7D86B200C6247F /* XYComposeParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 06275B3A1C7D86B200C6247F /* XYComposeParam.m */; };
+		06275B401C7D86B200C6247F /* XYUploadParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 06275B3C1C7D86B200C6247F /* XYUploadParam.m */; };
+		06275B411C7D86B200C6247F /* XYComposeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 06275B3E1C7D86B200C6247F /* XYComposeTool.m */; };
 		06A81B6D1C7CAFB00079EB56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A81B6C1C7CAFB00079EB56 /* main.m */; };
 		06A81B761C7CAFB00079EB56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06A81B741C7CAFB00079EB56 /* Main.storyboard */; };
 		06A81B781C7CAFB00079EB56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06A81B771C7CAFB00079EB56 /* Images.xcassets */; };
@@ -126,10 +129,16 @@
 /* Begin PBXFileReference section */
 		06275B2B1C7D727D00C6247F /* XYComposeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYComposeView.h; sourceTree = "<group>"; };
 		06275B2C1C7D727D00C6247F /* XYComposeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYComposeView.m; sourceTree = "<group>"; };
-		06275B2E1C7D7D6400C6247F /* XYComposeToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYComposeToolBar.h; sourceTree = "<group>"; };
-		06275B2F1C7D7D6400C6247F /* XYComposeToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYComposeToolBar.m; sourceTree = "<group>"; };
 		06275B311C7D800000C6247F /* XYComposePhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYComposePhotosView.h; sourceTree = "<group>"; };
 		06275B321C7D800000C6247F /* XYComposePhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYComposePhotosView.m; sourceTree = "<group>"; };
+		06275B341C7D846300C6247F /* XYComposeToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYComposeToolBar.h; sourceTree = "<group>"; };
+		06275B351C7D846300C6247F /* XYComposeToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYComposeToolBar.m; sourceTree = "<group>"; };
+		06275B391C7D86B200C6247F /* XYComposeParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYComposeParam.h; sourceTree = "<group>"; };
+		06275B3A1C7D86B200C6247F /* XYComposeParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYComposeParam.m; sourceTree = "<group>"; };
+		06275B3B1C7D86B200C6247F /* XYUploadParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYUploadParam.h; sourceTree = "<group>"; };
+		06275B3C1C7D86B200C6247F /* XYUploadParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYUploadParam.m; sourceTree = "<group>"; };
+		06275B3D1C7D86B200C6247F /* XYComposeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYComposeTool.h; sourceTree = "<group>"; };
+		06275B3E1C7D86B200C6247F /* XYComposeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYComposeTool.m; sourceTree = "<group>"; };
 		06A81B671C7CAFB00079EB56 /* alexWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alexWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A81B6B1C7CAFB00079EB56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06A81B6C1C7CAFB00079EB56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -353,6 +362,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06275B371C7D86B200C6247F /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				06275B381C7D86B200C6247F /* Param */,
+				06275B3D1C7D86B200C6247F /* XYComposeTool.h */,
+				06275B3E1C7D86B200C6247F /* XYComposeTool.m */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		06275B381C7D86B200C6247F /* Param */ = {
+			isa = PBXGroup;
+			children = (
+				06275B391C7D86B200C6247F /* XYComposeParam.h */,
+				06275B3A1C7D86B200C6247F /* XYComposeParam.m */,
+				06275B3B1C7D86B200C6247F /* XYUploadParam.h */,
+				06275B3C1C7D86B200C6247F /* XYUploadParam.m */,
+			);
+			path = Param;
+			sourceTree = "<group>";
+		};
 		06A81B5E1C7CAFB00079EB56 = {
 			isa = PBXGroup;
 			children = (
@@ -457,10 +487,10 @@
 		06A81B961C7CAFD50079EB56 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				06275B341C7D846300C6247F /* XYComposeToolBar.h */,
+				06275B351C7D846300C6247F /* XYComposeToolBar.m */,
 				06275B311C7D800000C6247F /* XYComposePhotosView.h */,
 				06275B321C7D800000C6247F /* XYComposePhotosView.m */,
-				06275B2E1C7D7D6400C6247F /* XYComposeToolBar.h */,
-				06275B2F1C7D7D6400C6247F /* XYComposeToolBar.m */,
 				06275B2B1C7D727D00C6247F /* XYComposeView.h */,
 				06275B2C1C7D727D00C6247F /* XYComposeView.m */,
 			);
@@ -958,6 +988,7 @@
 		06A81C6A1C7CAFD50079EB56 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				06275B371C7D86B200C6247F /* Compose */,
 				06A81C6B1C7CAFD50079EB56 /* Param */,
 				06A81C6E1C7CAFD50079EB56 /* XYAccountTool.h */,
 				06A81C6F1C7CAFD50079EB56 /* XYAccountTool.m */,
@@ -1164,7 +1195,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				06A81CC11C7CAFD50079EB56 /* MJPhotoBrowser.m in Sources */,
+				06275B401C7D86B200C6247F /* XYUploadParam.m in Sources */,
 				06A81CDB1C7CAFD50079EB56 /* UIImage+WebP.m in Sources */,
+				06275B411C7D86B200C6247F /* XYComposeTool.m in Sources */,
 				06A81CB41C7CAFD50079EB56 /* AFURLSessionManager.m in Sources */,
 				06A81CD31C7CAFD50079EB56 /* SDWebImageDecoder.m in Sources */,
 				06A81CB01C7CAFD50079EB56 /* AFSecurityPolicy.m in Sources */,
@@ -1184,6 +1217,7 @@
 				06A81CE51C7CAFD50079EB56 /* XYRootTool.m in Sources */,
 				06A81C9E1C7CAFD50079EB56 /* XYTabBarController.m in Sources */,
 				06A81CA21C7CAFD50079EB56 /* XYMessageViewController.m in Sources */,
+				06275B361C7D846300C6247F /* XYComposeToolBar.m in Sources */,
 				06A81CBA1C7CAFD50079EB56 /* MJIvar.m in Sources */,
 				06A81CEB1C7CAFD50079EB56 /* XYUserTool.m in Sources */,
 				06A81CDD1C7CAFD50079EB56 /* UIImageView+WebCache.m in Sources */,
@@ -1235,9 +1269,9 @@
 				06275B331C7D800000C6247F /* XYComposePhotosView.m in Sources */,
 				06A81CB81C7CAFD50079EB56 /* MJConst.m in Sources */,
 				06A81C941C7CAFD50079EB56 /* XYOriginalView.m in Sources */,
-				06275B301C7D7D6400C6247F /* XYComposeToolBar.m in Sources */,
 				06A81CE71C7CAFD50079EB56 /* XYStatusResult.m in Sources */,
 				06A81CE81C7CAFD50079EB56 /* XYStatusTool.m in Sources */,
+				06275B3F1C7D86B200C6247F /* XYComposeParam.m in Sources */,
 				06A81C9F1C7CAFD50079EB56 /* XYBadgeView.m in Sources */,
 				06A81CBE1C7CAFD50079EB56 /* NSObject+MJKeyValue.m in Sources */,
 				06A81C9D1C7CAFD50079EB56 /* XYNavigationController.m in Sources */,
