@@ -21,11 +21,6 @@
 
 - (NSString *)created_at
 {
-    // Tue Mar 10 17:32:22 +0800 2015
-    // 字符串转换NSDate
-//    _created_at = @"Tue Mar 11 17:48:24 +0800 2015";
-
-    
     // 日期格式字符串
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
     fmt.dateFormat = @"EEE MMM d HH:mm:ss Z yyyy";
@@ -36,7 +31,6 @@
         if ([created_at isToday]) { // 今天
             
             // 计算跟当前时间差距
-//         NSDateComponents *cmp = [created_at deltaWithNow];
             NSDateComponents *cmp = [created_at deltaWithNow];
             
             if (cmp.hour >= 1) {
