@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @class XYComposeToolBar;
-
 @protocol XYComposeToolBarDelegate <NSObject>
 @optional
 /**
@@ -25,6 +24,5 @@
 @interface CZComposeToolBar : UIView
 
 @property (nonatomic, weak) id<XYComposeToolBarDelegate> delegate;
-
 
 @end
