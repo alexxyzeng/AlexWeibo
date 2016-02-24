@@ -1,0 +1,39 @@
+//
+//  alexWeibo.pch
+//  alexWeibo
+//
+//  Created by xiayao on 16/2/23.
+//  Copyright (c) 2016年 xiayao. All rights reserved.
+//
+
+
+#ifdef __OBJC__
+
+#import "UIView+Frame.h"
+#import "UIImage+Image.h"
+
+#define XYKeyWindow [UIApplication sharedApplication].keyWindow
+
+// ...表示宏定义的可变参数
+// __VA_ARGS__:表示函数里面的可变参数
+#ifdef DEBUG // 调试
+
+#define XYLog(...) NSLog(__VA_ARGS__)
+
+#else // 发布
+
+#define XYLog(...)
+
+#endif
+
+/*        cell            */
+#define XYStatusCellMargin 10
+#define XYNameFont [UIFont systemFontOfSize:13]
+#define XYTimeFont [UIFont systemFontOfSize:12]
+#define XYSourceFont XYTimeFont
+#define XYTextFont [UIFont systemFontOfSize:15]
+#define XYScreenW [UIScreen mainScreen].bounds.size.width
+
+
+#endif
+
