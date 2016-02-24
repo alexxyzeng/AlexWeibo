@@ -73,8 +73,8 @@
     [super viewDidLoad];
     
     
-    self.tableView.backgroundColor = [UIColor lightGrayColor];
-    
+    self.tableView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 5, 0);
     // 取消分割线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
@@ -328,11 +328,6 @@
     
     // 给cell传递模型
     cell.statusF = statusF;
-    //    // 用户昵称
-    //    cell.textLabel.text = status.user.name;
-    //    [cell.imageView sd_setImageWithURL:status.user.profile_image_url placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
-    //    cell.detailTextLabel.text = status.text;
-    
     return cell;
 }
 
