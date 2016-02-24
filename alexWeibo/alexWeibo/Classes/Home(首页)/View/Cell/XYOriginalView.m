@@ -14,30 +14,33 @@
 #import "UIImageView+WebCache.h"
 
 @interface XYOriginalView ()
-
-// 头像
-@property (nonatomic, weak) UIImageView *iconView;
-
-
-// 昵称
-@property (nonatomic, weak) UILabel *nameView;
-
-
-// vip
-@property (nonatomic, weak) UIImageView *vipView;
-
-
-// 时间
-@property (nonatomic, weak) UILabel *timeView;
-
-// 来源
-@property (nonatomic, weak) UILabel *sourceView;
-
-
-// 正文
-@property (nonatomic, weak) UILabel *textView;
-
-// 配图
+/**
+ *  头像
+ */
+@property (nonatomic, weak) UIImageView  *iconView;
+/**
+ *  昵称
+ */
+@property (nonatomic, weak) UILabel      *nameView;
+/**
+ *  VIP
+ */
+@property (nonatomic, weak) UIImageView  *vipView;
+/**
+ *  时间
+ */
+@property (nonatomic, weak) UILabel      *timeView;
+/**
+ *  来源
+ */
+@property (nonatomic, weak) UILabel      *sourceView;
+/**
+ *  正文
+ */
+@property (nonatomic, weak) UILabel      *textView;
+/**
+ *  配图
+ */
 @property (nonatomic, weak) XYPhotosView *photosView;
 
 @end
@@ -136,15 +139,10 @@
     
     // 时间
     _timeView.text = status.created_at;
-    
     // 来源
-    
     _sourceView.text = status.source;
-    
     // 正文
     _textView.text = status.text;
-    
-
     // 配图
     _photosView.pic_urls = status.pic_urls;
 }
@@ -168,18 +166,18 @@
         
     }
     
-    //!!!:  时间 每次有新的时间都需要计算时间frame
+    //每次有新的时间都需要计算时间frame
     XYStatus *status = _statusF.status;
     CGFloat timeX = _nameView.frame.origin.x;
     CGFloat timeY = CGRectGetMaxY( _nameView.frame) + XYStatusCellMargin * 0.5;
     CGSize timeSize = [status.created_at sizeWithFont:XYTimeFont];
-      _timeView.frame = (CGRect){{timeX,timeY},timeSize};
+      _timeView.frame = (CGRect){{timeX,timeY}, timeSize};
 
     // 来源
     CGFloat sourceX = CGRectGetMaxX(_timeView.frame) + XYStatusCellMargin;
     CGFloat sourceY = timeY;
     CGSize sourceSize = [status.source sizeWithFont:XYSourceFont];
-     _sourceView.frame = (CGRect){{sourceX,sourceY},sourceSize};
+     _sourceView.frame = (CGRect){{sourceX,sourceY}, sourceSize};
   
     // 正文
     _textView.frame = _statusF.originalTextFrame;

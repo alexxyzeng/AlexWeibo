@@ -25,16 +25,16 @@
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
     fmt.dateFormat = @"EEE MMM d HH:mm:ss Z yyyy";
     NSDate *created_at = [fmt dateFromString:_created_at];
-    
+    NSLog(@"%@", created_at);
     if ([created_at isThisYear]) { // 今年
         
         if ([created_at isToday]) { // 今天
             
             // 计算跟当前时间差距
             NSDateComponents *cmp = [created_at deltaWithNow];
-            
             if (cmp.hour >= 1) {
                 return [NSString stringWithFormat:@"%ld小时之前",cmp.hour];
+                
             }else if (cmp.minute > 1){
                 return [NSString stringWithFormat:@"%ld分钟之前",cmp.minute];
             }else{

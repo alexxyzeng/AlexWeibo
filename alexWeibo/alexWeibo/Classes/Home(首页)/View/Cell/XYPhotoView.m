@@ -24,10 +24,9 @@
         self.userInteractionEnabled = YES;
         //图片的缩放模式
         self.contentMode = UIViewContentModeScaleAspectFill;
-        // 裁剪图片，超出控件的部分裁剪掉
+        // 裁剪图片
         self.clipsToBounds = YES;
         //设置右下角图片的gif标示
-//        UIImageView *gifView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"timeline_image_gif"]];
         UIImageView *gifView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"timeline_image_gif"]];
         [self addSubview:gifView];
         _gifView = gifView;

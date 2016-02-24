@@ -345,5 +345,9 @@
     return statusF.cellHeight;
 }
 
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
 
 @end

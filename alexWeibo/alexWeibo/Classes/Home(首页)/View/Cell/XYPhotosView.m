@@ -51,7 +51,7 @@
         [self addSubview:imgView];
     }
 }
-//!!!:
+
 #pragma mark - 点击图片的时候调用
 - (void)tap:(UITapGestureRecognizer *)tap
 {
@@ -61,18 +61,6 @@
     int i = 0;
     NSMutableArray *arrM = [NSMutableArray array];
     for (XYPhoto *photo in _pic_urls) {
-        
-//        MJPhoto *p = [[MJPhoto alloc] init];
-        //获取URL的绝对字符串
-//        NSString *urlStr = photo.thumbnail_pic.absoluteString;
-//        //  替换字符串中的部分字符
-//        urlStr = [urlStr stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
-//        p.url = [NSURL URLWithString:urlStr];
-//        p.index = i;
-//        p.srcImageView = tapView;
-//        [arrM addObject:p];
-//        i++;
-        //TODO: 学习MJPhoto!
         MJPhoto *p = [[MJPhoto alloc] init];
         //  获取URL的绝对字符串
         NSString *urlStr = photo.thumbnail_pic.absoluteString;
@@ -85,14 +73,6 @@
         i++;
     }
     
-   
-    // 弹出图片浏览器
-    // 创建浏览器对象
-//    MJPhotoBrowser *brower = [[MJPhotoBrowser alloc] init];
-//    // MJPhoto
-//    brower.photos = arrM;
-//    brower.currentPhotoIndex = tapView.tag;
-//    [brower show];
     //创建图片浏览器
     MJPhotoBrowser *brower = [[MJPhotoBrowser alloc] init];
     //获取图片浏览器的图片对象
@@ -119,7 +99,6 @@
             XYPhoto *photo = _pic_urls[i];
             
             imageV.photo = photo;
-           
             
         }else{
             imageV.hidden = YES;

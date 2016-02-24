@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06275B2D1C7D727D00C6247F /* XYComposeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06275B2C1C7D727D00C6247F /* XYComposeView.m */; };
+		06275B301C7D7D6400C6247F /* XYComposeToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 06275B2F1C7D7D6400C6247F /* XYComposeToolBar.m */; };
+		06275B331C7D800000C6247F /* XYComposePhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06275B321C7D800000C6247F /* XYComposePhotosView.m */; };
 		06A81B6D1C7CAFB00079EB56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A81B6C1C7CAFB00079EB56 /* main.m */; };
 		06A81B761C7CAFB00079EB56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06A81B741C7CAFB00079EB56 /* Main.storyboard */; };
 		06A81B781C7CAFB00079EB56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06A81B771C7CAFB00079EB56 /* Images.xcassets */; };
@@ -121,6 +124,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06275B2B1C7D727D00C6247F /* XYComposeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYComposeView.h; sourceTree = "<group>"; };
+		06275B2C1C7D727D00C6247F /* XYComposeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYComposeView.m; sourceTree = "<group>"; };
+		06275B2E1C7D7D6400C6247F /* XYComposeToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYComposeToolBar.h; sourceTree = "<group>"; };
+		06275B2F1C7D7D6400C6247F /* XYComposeToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYComposeToolBar.m; sourceTree = "<group>"; };
+		06275B311C7D800000C6247F /* XYComposePhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYComposePhotosView.h; sourceTree = "<group>"; };
+		06275B321C7D800000C6247F /* XYComposePhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYComposePhotosView.m; sourceTree = "<group>"; };
 		06A81B671C7CAFB00079EB56 /* alexWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alexWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A81B6B1C7CAFB00079EB56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06A81B6C1C7CAFB00079EB56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -448,6 +457,12 @@
 		06A81B961C7CAFD50079EB56 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				06275B311C7D800000C6247F /* XYComposePhotosView.h */,
+				06275B321C7D800000C6247F /* XYComposePhotosView.m */,
+				06275B2E1C7D7D6400C6247F /* XYComposeToolBar.h */,
+				06275B2F1C7D7D6400C6247F /* XYComposeToolBar.m */,
+				06275B2B1C7D727D00C6247F /* XYComposeView.h */,
+				06275B2C1C7D727D00C6247F /* XYComposeView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1088,6 +1103,7 @@
 		06A81B5F1C7CAFB00079EB56 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XY;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = xiayao;
 				TargetAttributes = {
@@ -1153,6 +1169,7 @@
 				06A81CD31C7CAFD50079EB56 /* SDWebImageDecoder.m in Sources */,
 				06A81CB01C7CAFD50079EB56 /* AFSecurityPolicy.m in Sources */,
 				06A81CE41C7CAFD50079EB56 /* XYBaseParam.m in Sources */,
+				06275B2D1C7D727D00C6247F /* XYComposeView.m in Sources */,
 				06A81CBD1C7CAFD50079EB56 /* NSObject+MJIvar.m in Sources */,
 				06A81CC21C7CAFD50079EB56 /* MJPhotoLoadingView.m in Sources */,
 				06A81CA41C7CAFD50079EB56 /* XYNewFeatureCell.m in Sources */,
@@ -1215,8 +1232,10 @@
 				06A81CD21C7CAFD50079EB56 /* SDWebImageCompat.m in Sources */,
 				06A81CD61C7CAFD50079EB56 /* SDWebImageManager.m in Sources */,
 				06A81CCE1C7CAFD50079EB56 /* UIView+MJExtension.m in Sources */,
+				06275B331C7D800000C6247F /* XYComposePhotosView.m in Sources */,
 				06A81CB81C7CAFD50079EB56 /* MJConst.m in Sources */,
 				06A81C941C7CAFD50079EB56 /* XYOriginalView.m in Sources */,
+				06275B301C7D7D6400C6247F /* XYComposeToolBar.m in Sources */,
 				06A81CE71C7CAFD50079EB56 /* XYStatusResult.m in Sources */,
 				06A81CE81C7CAFD50079EB56 /* XYStatusTool.m in Sources */,
 				06A81C9F1C7CAFD50079EB56 /* XYBadgeView.m in Sources */,
