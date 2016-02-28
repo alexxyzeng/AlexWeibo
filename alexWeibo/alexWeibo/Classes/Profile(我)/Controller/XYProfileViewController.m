@@ -7,7 +7,7 @@
 //
 
 #import "XYProfileViewController.h"
-
+#import "XYOAuthViewController.h"
 @interface XYProfileViewController ()
 
 @end
@@ -18,6 +18,8 @@
     [super viewDidLoad];
     
     UIBarButtonItem *settting = [[UIBarButtonItem alloc] initWithTitle:@"设置"  style:UIBarButtonItemStyleBordered target:self action:@selector(settting)];
+    UIBarButtonItem *logout = [[UIBarButtonItem alloc] initWithTitle:@"注销" style:UIBarButtonItemStylePlain target:self action:@selector(logout:)];
+    self.navigationItem.leftBarButtonItem = logout;
     self.navigationItem.rightBarButtonItem = settting;
   
 }
@@ -26,6 +28,20 @@
 - (void)settting
 {
     
+}
+
+/**
+ *  注销
+ */
+- (void)logout:(UIBarButtonItem *)item
+{
+    NSFileManager *manager = [NSFileManager defaultManager];
+    NSString *accountFile = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"account.data"];
+    [manager removeItemAtPath:accountFile error:NULL];
+    
+    XYOAuthViewController *oauth = [[XYOAuthViewController alloc] init];
+    oauth.title = @"新浪微博授权";
+    [UIApplication sharedApplication].keyWindow.rootViewController = [[UINavigationController alloc] initWithRootViewController:oauth];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

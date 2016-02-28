@@ -14,23 +14,31 @@
 #import "XYMessageViewController.h"
 #import "XYDiscoverViewController.h"
 #import "XYProfileViewController.h"
-
 #import "XYNavigationController.h"
-
 #import "XYUserTool.h"
 #import "XYUserResult.h"
-
+#import "XYPlusMenuBtn.h"
 #import "XYComposeViewController.h"
+#import "XYPlusMenuView.h"
+@interface XYTabBarController ()<XYTabBarDelegate, XYPlusMenuViewDelegate, UIImagePickerControllerDelegate>
 
-@interface XYTabBarController ()<XYTabBarDelegate>
-
-@property (nonatomic, strong) NSMutableArray *items;
-
-@property (nonatomic, weak) XYHomeViewController *home;
-
-@property (nonatomic, weak) XYMessageViewController *message;
-
-@property (nonatomic, weak) XYProfileViewController *profile;
+@property (nonatomic, strong) NSMutableArray          *items;
+/**
+ *  主页视图控制器
+ */
+@property (nonatomic, weak  ) XYHomeViewController    *home;
+/**
+ *  消息视图控制器
+ */
+@property (nonatomic, weak  ) XYMessageViewController *message;
+/**
+ *  我视图控制器
+ */
+@property (nonatomic, weak  ) XYProfileViewController *profile;
+/**
+ *  菜单视图
+ */
+@property (nonatomic, strong) XYPlusMenuView          *menuView;
 
 @end
 
@@ -70,13 +78,10 @@
 
         // 设置首页未读数
         _home.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d",result.status];
-        
         // 设置消息未读数
         _message.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d",result.messageCount];
-        
         // 设置我的未读数
         _profile.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d",result.follower];
-        
         // 设置应用程序所有的未读数
         [UIApplication sharedApplication].applicationIconBadgeNumber = result.totoalCount;
         
@@ -119,24 +124,52 @@
 // 点击加号按钮的时候调用
 - (void)tabBarDidClickPlusButton:(XYTabBar *)tabBar
 {
-    // 创建发送微博控制器
-    XYComposeViewController *composeVc = [[XYComposeViewController alloc] init];
-    XYNavigationController *nav = [[XYNavigationController alloc] initWithRootViewController:composeVc];
-    
-    [self presentViewController:nav animated:YES completion:nil];
+    _menuView = [[XYPlusMenuView alloc] initWithFrame:self.view.bounds];
+    _menuView.delegate = self;
+    [self.view addSubview:_menuView];
 }
 
+- (void)didClickMenuViewBtnAtIndex:(NSUInteger)index
+{
+    switch (index) {
+        case 0:
+        {
+            XYComposeViewController *composeVc = [[XYComposeViewController alloc] init];
+            XYNavigationController *navVc = [[XYNavigationController alloc] initWithRootViewController:composeVc];
+            [self presentViewController:navVc animated:YES completion:nil];
+        }
+            break;
+        case 1:
+        {
+            UIImagePickerController *imgPickerVc = [[UIImagePickerController alloc] init];
+            imgPickerVc.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+            XYComposeViewController *composeVc = [[XYComposeViewController alloc] init];
+            imgPickerVc.delegate = composeVc;
+            [self presentViewController:imgPickerVc animated:YES completion:nil];
+        }
+            break;
+        default:
+            break;
+    }
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [_menuView removeFromSuperview];
+    });
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
-    
-    
-    
 }
 
 
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    if ([gestureRecognizer.view isKindOfClass:[XYPlusMenuBtn class]]) {
+        return YES;
+    }
+    return NO;
+}
 #pragma mark - 添加所有的子控制器
 - (void)setUpAllChildViewController
 {
@@ -156,12 +189,11 @@
     XYDiscoverViewController *discover = [[XYDiscoverViewController alloc] init];
     [self setUpOneChildViewController:discover image:[UIImage imageNamed:@"tabbar_discover"] selectedImage:[UIImage imageWithOriginalName:@"tabbar_discover_selected"] title:@"发现"];
 
-    
-
     // 我
     XYProfileViewController *profile = [[XYProfileViewController alloc] init];
     [self setUpOneChildViewController:profile image:[UIImage imageNamed:@"tabbar_profile"] selectedImage:[UIImage imageWithOriginalName:@"tabbar_profile_selected"] title:@"我"];
     _profile = profile;
+    
 }
 // navigationItem决定导航条上的内容
 // 导航条上的内容由栈顶控制器的navigationItem决定

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1C2F6DDDB715828820A895C908C10A1C9832BF7C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1C2F6DDDB715828820A895C908C10A1C9832BF7C" : 0,
+    "7D0899A24046D758B26C8D2A842E0EFAE6651E17" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9E796CAF-0C76-44B5-B6A9-187AF460A586",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1C2F6DDDB715828820A895C908C10A1C9832BF7C" : "alexWeibo",
+    "7D0899A24046D758B26C8D2A842E0EFAE6651E17" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "alexWeibo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "alexWeibo\/alexWeibo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:xiayao\/AlexWeibo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1C2F6DDDB715828820A895C908C10A1C9832BF7C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/xiayao\/github.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7D0899A24046D758B26C8D2A842E0EFAE6651E17"
+    }
+  ]
+}

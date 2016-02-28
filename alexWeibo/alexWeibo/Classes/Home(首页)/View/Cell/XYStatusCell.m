@@ -16,18 +16,25 @@
 #import "XYStatus.h"
 
 @interface XYStatusCell ()
-
-
+/**
+ *  原创微博视图
+ */
 @property (nonatomic, weak) XYOriginalView  *originalView;
-@property (nonatomic, weak) XYRetweetView   *retweetView             ;
+/**
+ *  转发微博视图
+ */
+@property (nonatomic, weak) XYRetweetView   *retweetView                 ;
+/**
+ *  微博工具条
+ */
 @property (nonatomic, weak) XYStatusToolBar *toolBar;
 
 @end
 
 @implementation XYStatusCell
 
-// 注意：cell是用initWithStyle初始化
 
+#pragma mark cell初始化
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {

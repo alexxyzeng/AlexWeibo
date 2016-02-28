@@ -1,16 +1,8 @@
-//
-//  XYOriginalView.m
-//  xiayao
-//
-//  Created by apple on 15-3-11.
-//  Copyright (c) 2015年 apple. All rights reserved.
-//
 
 #import "XYOriginalView.h"
 #import "XYStatusFrame.h"
 #import "XYStatus.h"
 #import "XYPhotosView.h"
-
 #import "UIImageView+WebCache.h"
 
 @interface XYOriginalView ()

@@ -1,10 +1,4 @@
-//
-//  AppDelegate.m
-//  xiayao
-//
-//  Created by apple on 15-3-4.
-//  Copyright (c) 2015年 apple. All rights reserved.
-//
+
 
 #import "AppDelegate.h"
 #import "XYOneViewController.h"
@@ -33,47 +27,27 @@
     UIUserNotificationSettings *setting = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge categories:nil];
     [application registerUserNotificationSettings:setting];
     
-    
-    // 设置音频会话
-    AVAudioSession *session = [AVAudioSession sharedInstance];
-    
-    // 后台播放
-    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
-    
-    // 单独播放一个后台程序
-    [session setCategory:AVAudioSessionCategorySoloAmbient error:nil];
-    
-    [session setActive:YES error:nil];
-    
     // 创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-
     
     // 选择根控制器
     // 判断下有没有授权
-    if ([XYAccountTool account]) { // 已经授权
-        
+    if ([XYAccountTool account]) {
+        // 已经授权
         // 选择根控制器
         [XYRootTool chooseRootViewController:self.window];
         
-    }else{ // 进行授权
+    }else{
+        // 进行授权
         XYOAuthViewController *oauthVc = [[XYOAuthViewController alloc] init];
-        
         // 设置窗口的根控制器
         self.window.rootViewController = oauthVc;
-
     }
     
     
     
     // 显示窗口
     [self.window makeKeyAndVisible];
-    // makeKeyAndVisible底层实现
-    // 1. application.keyWindow = self.window
-    // 2. self.window.hidden = NO;
-    
-    
-    
     return YES;
 }
 
@@ -93,15 +67,6 @@
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"silence.mp3" withExtension:nil];
-    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-    [player prepareToPlay];
-    // 无限播放
-    player.numberOfLoops = -1;
-    
-    [player play];
-    
-    _player = player;
 }
 
 // 程序进入后台的时候调用

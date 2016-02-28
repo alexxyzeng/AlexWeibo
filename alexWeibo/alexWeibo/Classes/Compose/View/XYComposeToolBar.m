@@ -1,6 +1,6 @@
 //
 //  XYComposeToolBar.m
-//  传智微博
+//  xiayao
 //
 //  Created by apple on 15-3-13.
 //  Copyright (c) 2015年 apple. All rights reserved.
@@ -27,14 +27,14 @@
 {
     // 相册
     [self setUpButtonWithImage:[UIImage imageNamed:@"compose_toolbar_picture"] highImage:[UIImage imageNamed:@"compose_toolbar_picture_highlighted"] target:self action:@selector(btnClick:)];
-    // 提及
-    [self setUpButtonWithImage:[UIImage imageNamed:@"compose_toolbar_picture"] highImage:[UIImage imageNamed:@"compose_toolbar_picture_highlighted"] target:self action:@selector(btnClick:)];
-    // 话题
-    [self setUpButtonWithImage:[UIImage imageNamed:@"compose_toolbar_picture"] highImage:[UIImage imageNamed:@"compose_toolbar_picture_highlighted"] target:self action:@selector(btnClick:)];
+    // 视频
+    [self setUpButtonWithImage:[UIImage imageNamed:@"compose_toolbar_video"] highImage:[UIImage imageNamed:@"compose_toolbar_video_highlighted"] target:self action:@selector(btnClick:)];
+    // 格式
+    [self setUpButtonWithImage:[UIImage imageNamed:@"compose_toolbar_form"] highImage:[UIImage imageNamed:@"compose_toolbar_form_highlighted"] target:self action:@selector(btnClick:)];
     // 表情
-    [self setUpButtonWithImage:[UIImage imageNamed:@"compose_toolbar_picture"] highImage:[UIImage imageNamed:@"compose_toolbar_picture_highlighted"] target:self action:@selector(btnClick:)];
-    // 键盘]
-    [self setUpButtonWithImage:[UIImage imageNamed:@"compose_toolbar_picture"] highImage:[UIImage imageNamed:@"compose_toolbar_picture_highlighted"] target:self action:@selector(btnClick:)];
+    [self setUpButtonWithImage:[UIImage imageNamed:@"compose_toolbar_link"] highImage:[UIImage imageNamed:@"compose_toolbar_link_highlighted"] target:self action:@selector(btnClick:)];
+    // 加
+    [self setUpButtonWithImage:[UIImage imageNamed:@"compose_toolbar_more"] highImage:[UIImage imageNamed:@"compose_toolbar_more_highlighted"] target:self action:@selector(btnClick:)];
 }
 
 - (void)setUpButtonWithImage:(UIImage *)image highImage:(UIImage *)highImage target:(id)target action:(SEL)action

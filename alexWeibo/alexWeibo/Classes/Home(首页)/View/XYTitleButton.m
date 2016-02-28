@@ -27,9 +27,9 @@
     [super layoutSubviews];
     
     if (self.currentImage == nil) return;
-    
+//    self.frame = CGRectMake(0, 0, self.imageView.width + self.titleLabel.width, 40);
     // title
-    self.titleLabel.x = self.imageView.x;
+//    self.titleLabel.y = self.imageView.y;
     
     // image
     self.imageView.x = CGRectGetMaxX(self.titleLabel.frame);

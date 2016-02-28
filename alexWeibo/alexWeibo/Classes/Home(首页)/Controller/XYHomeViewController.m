@@ -1,10 +1,4 @@
-//
-//  XYHomeViewController.m
-//  传智微博
-//
-//  Created by apple on 15-3-5.
-//  Copyright (c) 2015年 apple. All rights reserved.
-//
+
 
 #import "XYHomeViewController.h"
 
@@ -258,7 +252,8 @@
     [titleButton setTitle:title forState:UIControlStateNormal];
     [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateNormal];
     [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateSelected];
-    
+    titleButton.frame =CGRectMake(0, 0, titleButton.imageView.width + titleButton.titleLabel.width, 40);
+    titleButton.center = CGPointMake(self.view.center.x - 50, 0);
     // 高亮的时候不需要调整图片
     titleButton.adjustsImageWhenHighlighted = NO;
     
@@ -281,7 +276,7 @@
     CGFloat popW = 200;
     CGFloat popX = (self.view.width - 200) * 0.5;
     CGFloat popH = popW;
-    CGFloat popY = 55;
+    CGFloat popY = 40;
     XYPopMenu *menu = [XYPopMenu showInRect:CGRectMake(popX, popY, popW, popH)];
     menu.contentView = self.one.view;
     
