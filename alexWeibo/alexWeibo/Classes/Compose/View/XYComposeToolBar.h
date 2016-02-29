@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @class XYComposeToolBar;
+
 @protocol XYComposeToolBarDelegate <NSObject>
+
 @optional
 /**
  *  点击toolbar按钮
@@ -21,13 +23,9 @@
 
 @end
 
-//@interface XYComposeToolBar : UIView
-//
-//@property (nonatomic, weak) id<XYComposeToolBarDelegate> delegate;
-//
-//@end
+
 @interface XYComposeToolBar : UIView
 
-@property (nonatomic, weak) id<XYComposeToolBarDelegate> delegate;
+@property (nonatomic, weak) id <XYComposeToolBarDelegate> delegate;
 
 @end

@@ -1,10 +1,3 @@
-//
-//  XYPlusMenuView.h
-//  
-//
-//  Created by xiayao on 16/2/26.
-//
-//
 
 #import <UIKit/UIKit.h>
 

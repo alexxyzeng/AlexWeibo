@@ -1,10 +1,3 @@
-//
-//  XYPhotosView.m
-//  xiayao
-//
-//  Created by apple on 15-3-12.
-//  Copyright (c) 2015年 apple. All rights reserved.
-//
 
 #import "XYPhotosView.h"
 #import "XYPhoto.h"
@@ -34,15 +27,6 @@
 - (void)setUpAllChildView
 {
     for (int i = 0; i < 9; i++) {
-
-//        XYPhotoView *imageV = [[XYPhotoView alloc] init];
-//       
-//        imageV.tag = i;
-//        // 添加点按手势
-//        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
-//        [imageV addGestureRecognizer:tap];
-//        
-//        [self addSubview:imageV];
         XYPhotoView *imgView = [[XYPhotoView alloc] init];
         imgView.tag = i;
         //添加点按手势

@@ -7,12 +7,8 @@
 //
 
 #import "XYOAuthViewController.h"
-
 #import "MBProgressHUD+MJ.h"
-
-
 #import "XYAccountTool.h"
-
 #import "XYRootTool.h"
 
 
@@ -31,10 +27,6 @@
     [self.view addSubview:webView];
     
     // 加载网页
-    
-    // 一个完整的URL:基本URL + 参数
-    // https://api.weibo.com/oauth2/authorize?client_id=&redirect_uri=
-    
     NSString *baseUrl = @"https://api.weibo.com/oauth2/authorize";
     NSString *client_id = @"4157579391";
     NSString *redirect_uri = @"http://www.baidu.com";

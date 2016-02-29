@@ -1,10 +1,4 @@
-//
-//  XYComposeViewController.m
-//  xiayao
-//
-//  Created by apple on 15-3-12.
-//  Copyright (c) 2015年 apple. All rights reserved.
-//
+
 
 #import "XYComposeViewController.h"
 #import "XYComposeView.h"
@@ -13,15 +7,28 @@
 #import "XYComposeTool.h"
 #import "MBProgressHUD+MJ.h"
 
-
-
-@interface XYComposeViewController ()<UITextViewDelegate,XYComposeToolBarDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
-@property (nonatomic, weak) XYComposeView *textView;
-@property (nonatomic, weak) XYComposeToolBar *toolBar;
-@property (nonatomic, weak) XYComposePhotosView *photosView;
-@property (nonatomic, strong) UIBarButtonItem *rightItem;
-
-@property (nonatomic, strong) NSMutableArray *images;
+@interface XYComposeViewController ()<UITextViewDelegate, XYComposeToolBarDelegate,
+                                      UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+/**
+ *  文本编辑视图
+ */
+@property (nonatomic, weak  ) XYComposeView       *textView;
+/**
+ *  工具条
+ */
+@property (nonatomic, weak  ) XYComposeToolBar    *toolBar;
+/**
+ *  图片视图
+ */
+@property (nonatomic, weak  ) XYComposePhotosView *photosView;
+/**
+ *  导航器右侧按钮
+ */
+@property (nonatomic, strong) UIBarButtonItem     *rightItem;
+/**
+ *  图片数组
+ */
+@property (nonatomic, strong) NSMutableArray      *images;
 
 @end
 
@@ -279,6 +286,7 @@
 
 - (void)dismiss
 {
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

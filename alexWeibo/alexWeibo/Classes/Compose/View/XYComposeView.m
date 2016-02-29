@@ -1,10 +1,4 @@
-//
-//  XYComposeView.m
-//  
-//
-//  Created by xiayao on 16/2/24.
-//
-//
+
 
 #import "XYComposeView.h"
 @interface XYComposeView ()

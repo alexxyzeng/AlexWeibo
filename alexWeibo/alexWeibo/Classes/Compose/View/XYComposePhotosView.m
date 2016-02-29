@@ -25,7 +25,6 @@
 {
     [super layoutSubviews];
     
-    
     NSInteger cols = 3;
     CGFloat marign = 10;
     CGFloat wh = (self.width - (cols - 1) * marign) / cols;

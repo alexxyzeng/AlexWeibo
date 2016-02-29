@@ -8,6 +8,8 @@
 
 #import "XYProfileViewController.h"
 #import "XYOAuthViewController.h"
+#import "XYSettingViewController.h"
+#import "XYNavigationController.h"
 @interface XYProfileViewController ()
 
 @end
@@ -27,7 +29,9 @@
 #pragma mark - 点击设置的时候调用
 - (void)settting
 {
-    
+    XYSettingViewController *settingVc = [[XYSettingViewController alloc] init];
+    [self addChildViewController:settingVc];
+    [self.navigationController pushViewController:settingVc animated:YES];
 }
 
 /**

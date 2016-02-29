@@ -80,18 +80,6 @@
     return cell;
 }
 
-/*
-    问题：1.cell的高度应该提前计算出来
-         2.cell的高度必须要先计算出每个子控件的frame，才能确定
-         3.如果在cell的setStatus方法计算子控件的位置，会比较耗性能
-    
-    解决:MVVM思想
-    M:模型
-    V:视图
-    VM:视图模型（模型包装视图模型，模型+模型对应视图的frame）
- 
- 
- */
 - (void)setStatusF:(XYStatusFrame *)statusF
 {
     _statusF = statusF;

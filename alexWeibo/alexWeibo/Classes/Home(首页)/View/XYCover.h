@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-// 代理什么时候用，一般自定义控件的时候都用代理
-// 为什么？因为一个控件以后可能要扩充新的功能，为了程序的扩展性，一般用代理
 
 @class XYCover;
+
 @protocol XYCoverDelegate <NSObject>
 
 @optional

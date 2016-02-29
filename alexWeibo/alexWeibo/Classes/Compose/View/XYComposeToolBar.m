@@ -1,10 +1,3 @@
-//
-//  XYComposeToolBar.m
-//  xiayao
-//
-//  Created by apple on 15-3-13.
-//  Copyright (c) 2015年 apple. All rights reserved.
-//
 
 #import "XYComposeToolBar.h"
 
@@ -14,10 +7,8 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        
         // 添加所有子控件
         [self setUpAllChildView];
-        
     }
     return self;
 }
@@ -26,15 +17,30 @@
 - (void)setUpAllChildView
 {
     // 相册
-    [self setUpButtonWithImage:[UIImage imageNamed:@"compose_toolbar_picture"] highImage:[UIImage imageNamed:@"compose_toolbar_picture_highlighted"] target:self action:@selector(btnClick:)];
+    [self setUpButtonWithImage:[UIImage imageNamed:@"compose_toolbar_picture"]
+                     highImage:[UIImage imageNamed:@"compose_toolbar_picture_highlighted"]
+                        target:self
+                        action:@selector(btnClick:)];
     // 视频
-    [self setUpButtonWithImage:[UIImage imageNamed:@"compose_toolbar_video"] highImage:[UIImage imageNamed:@"compose_toolbar_video_highlighted"] target:self action:@selector(btnClick:)];
+    [self setUpButtonWithImage:[UIImage imageNamed:@"compose_toolbar_video"]
+                     highImage:[UIImage imageNamed:@"compose_toolbar_video_highlighted"]
+                        target:self
+                        action:@selector(btnClick:)];
     // 格式
-    [self setUpButtonWithImage:[UIImage imageNamed:@"compose_toolbar_form"] highImage:[UIImage imageNamed:@"compose_toolbar_form_highlighted"] target:self action:@selector(btnClick:)];
+    [self setUpButtonWithImage:[UIImage imageNamed:@"compose_toolbar_form"]
+                     highImage:[UIImage imageNamed:@"compose_toolbar_form_highlighted"]
+                        target:self
+                        action:@selector(btnClick:)];
     // 表情
-    [self setUpButtonWithImage:[UIImage imageNamed:@"compose_toolbar_link"] highImage:[UIImage imageNamed:@"compose_toolbar_link_highlighted"] target:self action:@selector(btnClick:)];
+    [self setUpButtonWithImage:[UIImage imageNamed:@"compose_toolbar_link"]
+                     highImage:[UIImage imageNamed:@"compose_toolbar_link_highlighted"]
+                        target:self
+                        action:@selector(btnClick:)];
     // 加
-    [self setUpButtonWithImage:[UIImage imageNamed:@"compose_toolbar_more"] highImage:[UIImage imageNamed:@"compose_toolbar_more_highlighted"] target:self action:@selector(btnClick:)];
+    [self setUpButtonWithImage:[UIImage imageNamed:@"compose_toolbar_more"]
+                     highImage:[UIImage imageNamed:@"compose_toolbar_more_highlighted"]
+                        target:self
+                        action:@selector(btnClick:)];
 }
 
 - (void)setUpButtonWithImage:(UIImage *)image highImage:(UIImage *)highImage target:(id)target action:(SEL)action

@@ -28,10 +28,10 @@
 
 /*        cell            */
 #define XYStatusCellMargin 10
-#define XYNameFont [UIFont systemFontOfSize:13]
-#define XYTimeFont [UIFont systemFontOfSize:12]
+#define XYNameFont [UIFont fontWithName:@"HelveticaNeue" size:13]
+#define XYTimeFont [UIFont fontWithName:@"HelveticaNeue" size:12]
 #define XYSourceFont XYTimeFont
-#define XYTextFont [UIFont systemFontOfSize:15]
+#define XYTextFont [UIFont fontWithName:@"HelveticaNeue" size:15]
 #define XYScreenW [UIScreen mainScreen].bounds.size.width
 
 

@@ -1,10 +1,4 @@
-//
-//  XYComposeView.h
-//  
-//
-//  Created by xiayao on 16/2/24.
-//
-//
+
 
 #import <UIKit/UIKit.h>
 

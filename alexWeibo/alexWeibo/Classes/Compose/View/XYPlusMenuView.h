@@ -1,17 +1,14 @@
-//
-//  XYPlusView.h
-//  alexWeibo
-//
-//  Created by xiayao on 16/2/26.
-//  Copyright © 2016年 xiayao. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 @class XYPlusMenuBtn;
 @class XYPlusMenuView;
 
 @protocol XYPlusMenuViewDelegate <NSObject>
-
+/**
+ *  点击按钮时间的代理方法
+ *
+ *  @param index 按钮的序号
+ */
 - (void)didClickMenuViewBtnAtIndex:(NSUInteger)index;
 
 @end
